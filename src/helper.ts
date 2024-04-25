@@ -38,3 +38,17 @@ export const uploadFileUsingPresignedUrl = async (
     throw error;
   }
 };
+
+export const getImage = async () => {
+  try {
+    const { data } = await axios.put(
+      `https://qqqxnll40a.execute-api.eu-north-1.amazonaws.com/prod/get-image?key=testOnlineFood.jpg`
+    );
+    return data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      throw new Error(error.message);
+    }
+    throw error;
+  }
+};

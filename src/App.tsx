@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { getSignUrl, uploadFileUsingPresignedUrl } from "./helper";
+import { getImage, getSignUrl, uploadFileUsingPresignedUrl } from "./helper";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,6 +46,7 @@ function App() {
         {file && (
           <img src={file} alt="" style={{ width: "150px", height: "150px" }} />
         )}
+        <button onClick={() => getImage()}>Get Image</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
