@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getSignUrl = async (file: File) => {
   try {
-    const response = await axios.post(
+    const response = await axios.put(
       `https://qqqxnll40a.execute-api.eu-north-1.amazonaws.com/prod/upload?name=${file.name}&type=${file.type}`
     );
     const { url } = response.data;
