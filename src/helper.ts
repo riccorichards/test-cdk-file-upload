@@ -41,7 +41,7 @@ export const uploadFileUsingPresignedUrl = async (
 
 export const getImage = async () => {
   try {
-    const { data } = await axios.put(
+    const { data } = await axios.get(
       `https://qqqxnll40a.execute-api.eu-north-1.amazonaws.com/prod/get-image?key=testOnlineFood.jpg`
     );
     return data;
