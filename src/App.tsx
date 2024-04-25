@@ -23,6 +23,7 @@ function App() {
       }
     }
   };
+
   return (
     <>
       <div>
@@ -42,7 +43,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
         <input type="file" onChange={submitFile} />
-        {file && <img src={file} alt="" />}
+        {file && (
+          <img src={file} alt="" style={{ width: "150px", height: "150px" }} />
+        )}
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

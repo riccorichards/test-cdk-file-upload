@@ -3,7 +3,7 @@ import axios from "axios";
 export const getSignUrl = async (file: File) => {
   try {
     const response = await axios.post(
-      `https://heu9f7ek9l.execute-api.eu-north-1.amazonaws.com/prod/upload?name=${file.name}&type=${file.type}`
+      `https://qqqxnll40a.execute-api.eu-north-1.amazonaws.com/prod/upload?name=${file.name}&type=${file.type}`
     );
     const { url } = response.data;
 
