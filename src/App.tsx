@@ -13,10 +13,11 @@ function App() {
       const file = event.target.files[0];
       try {
         const signUrl = await getSignUrl(file);
-        if (signUrl) {
-          const uploadedFile = await uploadFileUsingPresignedUrl(file, signUrl);
-          setFile(uploadedFile);
-        }
+        console.log({ signUrl });
+        // if (signUrl) {
+        //   const uploadedFile = await uploadFileUsingPresignedUrl(file, signUrl);
+        // }
+        setFile(signUrl);
       } catch (error) {
         console.error("Error uploading file:", error);
         setFile(null);
