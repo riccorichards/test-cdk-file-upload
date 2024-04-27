@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { getImage, getSignUrl, uploadFileUsingPresignedUrl } from "./helper";
+import { getImage, getSignUrl } from "./helper";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,9 +14,6 @@ function App() {
       try {
         const signUrl = await getSignUrl(file);
         console.log({ signUrl });
-        // if (signUrl) {
-        //   const uploadedFile = await uploadFileUsingPresignedUrl(file, signUrl);
-        // }
         setFile(signUrl);
       } catch (error) {
         console.error("Error uploading file:", error);
